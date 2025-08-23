@@ -2,69 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lance Bullerwell's Resource Page</title>
   <meta name="description" content="Quick links to Lance Bullerwell's Compass profile, calendar, vendor resources, market report, and Instagram." />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <style>
+    :root { --bg:#f4f4f4; --ink:#222; --btn:#1d3557; --btnHover:#457b9d; }
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
       margin: 0;
-      padding: 2rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
       text-align: center;
+      padding: 2rem;
     }
-    h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #1d3557;
-      margin: 0 0 1.25rem;
-    }
-    .intro-text {
-      font-size: 1.1rem;
-      margin: 0 0 2rem;
-    }
-    .link-list {
-      max-width: 420px;
-      margin: 0 auto;
-    }
-    .link-list a {
-      display: block;
-      background: #1d3557;
-      color: #fff;
-      text-decoration: none;
-      padding: 1rem;
-      border-radius: 8px;
+    h1 { margin: 0 0 1.25rem; font-size: 2rem; color: var(--btn); }
+    p.intro { margin: 0 0 2rem; font-size: 1.05rem; }
+    .links { max-width: 460px; margin: 0 auto; }
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       margin: 0.75rem 0;
+      padding: 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      background: var(--btn);
+      color: #fff;
       font-size: 1.05rem;
-      transition: opacity .2s ease-in-out;
+      transition: background .2s ease-in-out, transform .06s ease-in-out;
     }
-    .link-list a:hover { opacity: 0.9; }
+    .links a:hover { background: var(--btnHover); }
+    .links a:active { transform: translateY(1px); }
+    .links a:focus { outline: 3px solid #a8dadc; outline-offset: 2px; }
+    .links i, .links img { font-size: 1.2rem; height: 22px; width: auto; }
+    .links img { filter: invert(1); } /* makes dark logos show white on dark button */
   </style>
 </head>
 <body>
   <h1>Lance Bullerwell's Resource Page</h1>
-  <p class="intro-text">Explore my resources, connect with me, and access helpful tools.</p>
+  <p class="intro">Explore resources, connect with me, and access helpful tools.</p>
 
-  <div class="link-list">
+  <div class="links">
     <a href="https://www.compass.com/agents/lance-bullerwell/" target="_blank" rel="noopener noreferrer">
-      🌐 Visit My Compass Profile
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Compass_Real_Estate_logo.svg" alt="Compass Logo" />
+      Visit My Compass Profile
     </a>
 
     <a href="https://calendly.com/lance-bullerwell-compass/30min?back=1&amp;month=2025-08" target="_blank" rel="noopener noreferrer">
-      📅 Schedule a Meeting (Calendly)
+      <i class="fas fa-calendar-alt"></i> Schedule a Meeting (Calendly)
     </a>
 
     <a href="https://docs.google.com/document/d/14WJZLCuazfbJCI94UkyXGKRg5ukkCKDl6lgDNjiZ7kg/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-      📄 Vendor Resources
+      <i class="fas fa-file-alt"></i> Vendor Resources
     </a>
 
     <a href="https://form.jotform.com/232855840728061" target="_blank" rel="noopener noreferrer">
-      📊 Monthly SF Market Report
+      <i class="fas fa-chart-line"></i> Monthly SF Market Report
     </a>
 
     <a href="https://www.instagram.com/lance_sells_sanfrancisco/" target="_blank" rel="noopener noreferrer">
-      📸 Follow Me on Instagram
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" />
+      Follow Me on Instagram
     </a>
   </div>
 </body>
